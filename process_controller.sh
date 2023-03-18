@@ -17,7 +17,7 @@ LIST_OF_PROCESSES=$(mktemp)
 process_controller_save=$(mktemp)
 
 listProcesses () {
-	ps -u mikolaj | sed 's/[ ][ ]*/ /g' | cut -d ' ' -f 1,2,5- | grep -v "ps\|cinnamon\|cut\|grep\|nemo\|bash\|sed\|Web Content\|GeckoMain\|Isolated Web Co" > $LIST_OF_PROCESSES
+	ps x | sed 's/[ ][ ]*/ /g' | cut -d ' ' -f 1,2,6- | grep -v "ps\|cinnamon\|cut\|grep\|nemo\|bash\|sed\|Web Content\|GeckoMain\|Isolated Web Co" > $LIST_OF_PROCESSES
 }
 
 while getopts hvf:q OPT; do
